@@ -4,4 +4,5 @@ html,body{
   color: $mainFontColor;
   min-height: 100vh;
   background-color: $mainBackgroundColor;
+  overflow-x: hidden;
 }
