@@ -76,8 +76,10 @@
       padding: 0% 2% 1% 2%;
       text-align: justify;
       text-overflow: ellipsis;
-      height: 39%;
-      overflow-y: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 
