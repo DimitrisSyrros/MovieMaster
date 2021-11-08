@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.App {
+  .app-layout {
+    padding: 1%;
+
+    .color-text {
+      color: $borderHighlight;
+    }
+
+    .app-header {
+      display: flex;
+      margin-bottom: 1%;
+
+      .playing-now-btn {
+        line-height: 1.8;
+        font-size: large;
+        font-weight: 600;
+        cursor: pointer;
+        color: $mainFontColor;
+        background: transparent;
+        border: none;
+
+        &:hover, &:active {
+          color: $borderHighlight;
+        }
+
+        &:disabled {
+          color: $mainFontColor;
+        }
+      }
+    }
+
+
+    .basic-grid {
+      display: grid;
+      column-gap: 1rem;
+      row-gap: 4rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-auto-flow: dense;
+    }
+  }
+}

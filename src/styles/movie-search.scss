@@ -1,0 +1,18 @@
+@import 'variables';
+
+.search-container{
+  margin-left: 2%;
+  width: 50%;
+  .movie-search{
+    background-color: $mainBackgroundColor;
+    color: $mainFontColor;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid $mainFontColor;
+    transition: border-bottom 500ms ease-out;
+    &:focus{
+      border-bottom: 2px solid $borderHighlight;
+      outline: none;
+    }
+  }
+}
