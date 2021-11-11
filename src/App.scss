@@ -2,11 +2,7 @@
 
 .App {
   .app-layout {
-    padding: 1%;
-
-    .color-text {
-      color: $borderHighlight;
-    }
+    padding: 1% 1% 1% 5rem;
 
     .app-header {
       display: flex;
@@ -39,5 +35,11 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-auto-flow: dense;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app-layout{
+    padding: 1%!important;
   }
 }

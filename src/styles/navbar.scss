@@ -1,0 +1,87 @@
+@import 'variables';
+
+.navbar {
+  position: fixed;
+  transition: width 200ms ease-in;
+  z-index: 2;
+  background-color: $navbarMainBackground;
+  .color-text {
+    color: $borderHighlight;
+  }
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li:hover{
+  &:not(:first-of-type){
+    background: black;
+  }
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: $mainFontColor;
+  text-decoration: none;
+  &:hover, &:not(:first-of-type){
+    .nav-icon {
+      filter: grayscale(0%) opacity(1);
+    }
+  }
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  font-size: 16px;
+}
+
+.nav-icon {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .navbar-nav{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .movie-master-logo{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    width: 5rem;
+    height: 100vh;
+    top: 0;
+    &:hover {
+      width: 16rem;
+      .navbar-nav{
+        align-items: stretch;
+      }
+      .link-text {
+        display: inline;
+        background: transparent;
+        color: $mainFontColor;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

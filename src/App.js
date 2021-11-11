@@ -7,13 +7,12 @@ import {getGenres} from "./utils/apicalls";
 import MovieList from "./components/MovieList";
 import {getCachedGenres, setCachedGenres} from "./utils/genres-cache";
 import useMovieFetch from "./useMovieFetch";
+import Navbar from "./components/Navbar";
 
 function App() {
     const {
         setGenres, pageNo, setPageNo,
-        loading, setLoading,
-        nowPlaying, setNowPlaying, totalPages,
-        setMovieSearchName
+        loading, setLoading, totalPages
     } = useContext(StoreContext);
     const containerRef = useRef(null)
 
@@ -47,26 +46,11 @@ function App() {
     }, [loading])
 
 
-    //fetch movies in theaters triggered by pressing the tab
-    function handleClick(e) {
-        e.preventDefault()
-        if (nowPlaying === false) {
-            setNowPlaying(true)
-            setMovieSearchName("")
-            setPageNo(1)
-        }
-    }
-
     return (
         <div className="App">
+            <Navbar/>
             <div className="app-layout">
-                <h1>MOVIE<span className="color-text">MASTER</span></h1>
                 <div className="app-header">
-                    <button className="playing-now-btn"
-                            onClick={e => handleClick(e)}
-                            disabled={nowPlaying}
-                    >Playing Now
-                    </button>
                     <MovieSearch/>
                 </div>
                 <MovieList ref={lastMovieRef}/>

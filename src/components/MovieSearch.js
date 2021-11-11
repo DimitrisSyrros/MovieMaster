@@ -33,6 +33,7 @@ function MovieSearch() {
         <div className="search-container">
             <input name="movie"
                    className="movie-search"
+                   id="movie-search-bar"
                    placeholder="Search a movie"
                    type="text"
                    autoComplete="off"
