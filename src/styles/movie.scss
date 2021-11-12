@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  cursor: pointer;
   position: relative;
 
   .movie-genres, .movie-release, .movie-overview {
@@ -46,6 +45,13 @@
     padding: 1.5% 3%;
   }
 
+  .add-to-watchlist, .watchlist-added {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    cursor: pointer;
+  }
+
 }
 
 .poster-wrapper-expanded {
@@ -74,11 +80,9 @@
       position: relative;
       padding: 0% 2% 1% 2%;
       text-align: justify;
-      text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 9;
       -webkit-box-orient: vertical;
-      overflow: hidden;
     }
   }
 
@@ -141,16 +145,6 @@
       transform: translateX(-50%);
     }
 
-    .review-author {
-      font-weight: bold;
-      overflow-y: scroll;
-      max-height: 7vh;
-      margin-bottom: 1%;
-    }
-
-    .review-content {
-      font-weight: 100;
-    }
   }
 }
 

@@ -3,7 +3,7 @@
 .navbar {
   position: fixed;
   transition: width 200ms ease-in;
-  z-index: 2;
+  z-index: 500;
   background-color: $navbarMainBackground;
   .color-text {
     color: $borderHighlight;
