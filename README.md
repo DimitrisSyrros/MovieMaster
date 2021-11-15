@@ -5,6 +5,7 @@ search for movies and view details about them.
 The project was developed with create-react-app and had the Movie DB (MDB) JSON API for a data source. 
 The global application state is created using React’s built-in features: React Hooks and the Context API. 
 Styling was done with SCSS(CSS Grid, Flexbox).
+The react-router-dom v6 is also used for navigating purposes.
 
 In order for this project to run you need .env file
 with the api key as a value for this variable REACT_APP_MOVIEDB_API_KEY
@@ -30,5 +31,8 @@ When users want to search for a movie, they just have to type part of its title 
 
 Either while searching for a specific title or browsing the “in theaters” movies, MovieMaster offers the ability to click on a movie in the list, expand it in place and view more information about it. Movie details provided are Video Trailer (if any), Reviews(up to 2) and similar Movies.
 
-Flow 4: (Mini-Flow) Similar Movies
+  Flow 4: WatchList
+Users can add or remove movies from their watchlist by pressing the icon on the top right corner of each movie poster. They can also see all their movies saved on their watchlist by navigating to that page from the navbar. Moviemaster saves to the localStorage up to 20 movies that users may want to view later again.
+
+  Flow 5: (Mini-Flow) Similar Movies
 When a user is in movie details he can click one of the similar movies and automatically search for that movie title.
