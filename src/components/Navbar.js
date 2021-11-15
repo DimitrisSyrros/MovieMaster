@@ -33,24 +33,20 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar-nav">
-                <li className="logo">
+                <Link to="/" className="nav-link">
                     <p className="nav-link">
                         <img className="movie-master-logo" src={process.env.PUBLIC_URL + '/logo192.png'}
                              alt="MovieMaster Logo" height='60' width='60'/>
                         <strong className='link-text'>MOVIE<strong className="color-text">MASTER</strong></strong>
                     </p>
-                </li>
+                </Link>
 
-                <li className="nav-item">
+                <li className="nav-item" onClick={(e) => fetchPlayNow(e)}>
                     <Link to="/" className="nav-link">
                         <img className='nav-icon' src={process.env.PUBLIC_URL + '/popcorn.png'}
                              alt="Now Playing Icon"
                              height='50' width='50'/>
-                        <button className="link-text"
-                                onClick={(e)=>{fetchPlayNow(e)}}
-                                disabled={nowPlaying}
-                        >Movies Playing Now
-                        </button>
+                        <span className="link-text">Movies Playing Now</span>
                     </Link>
                 </li>
 

@@ -66,15 +66,15 @@ const Movie = forwardRef(({movie}, lastMovieRef) => {
 
     }
 
-    function whenTapped(e) {
-        e.preventDefault();
-        setExpand(true)
-        document.getElementById(movie.id).scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest"
-        });
-    }
+    // function whenTapped(e) {
+    //     e.preventDefault();
+    //     setExpand(true)
+    //     document.getElementById(movie.id).scrollIntoView({
+    //         behavior: "smooth",
+    //         block: "start",
+    //         inline: "nearest"
+    //     });
+    // }
 
     return (
         <div className={`card${expand === true ? "-expanded" : ""}`} ref={lastMovieRef}
@@ -86,8 +86,8 @@ const Movie = forwardRef(({movie}, lastMovieRef) => {
                         movie.poster_path ?
                             <img className="poster" width="300" height="400" loading="lazy"
                                  src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                                 alt={`${movie.title} Poster`} onTouchEnd={(e)=> whenTapped(e)}/> :
-                            <div className="poster-filler" onTouchEnd={(e)=> whenTapped(e)}/>
+                                 alt={`${movie.title} Poster`} /> :
+                            <div className="poster-filler" />
                     }
                     {
                         !stored && !expand &&

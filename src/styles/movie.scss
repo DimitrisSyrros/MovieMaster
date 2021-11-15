@@ -210,14 +210,14 @@
   }
 }
 
-//@media only screen and (max-width: 600px) {
-//  .poster-wrapper {
-//    position: relative;
-//    width: 50%;
-//    margin: 0;
-//  }
-//  .movie-basic-info{
-//    width: 150px;
-//    height: 188.5px;
-//  }
-//}
+@media only screen and (max-width: 600px) {
+
+  .movie-basic-info{
+    width: 150px;
+    height: 188.5px;
+  }
+
+  .view-more-btn{
+    padding: 1.5em 1.75em;
+  }
+}
