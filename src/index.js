@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import StoreProvider from './utils/store';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import WatchList from "./components/WatchList";
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <StoreProvider>
             <BrowserRouter>
@@ -16,8 +16,7 @@ ReactDOM.render(
                 </Routes>
             </BrowserRouter>
         </StoreProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 );
 
 
